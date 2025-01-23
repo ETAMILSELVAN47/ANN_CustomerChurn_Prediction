@@ -6,16 +6,16 @@ import pandas as pd
 
 
 #Load the model
-model=load_model('classification_notebooks\model.h5')
+model=load_model('model.h5')
 
 # load preprocessor objects
-with open(file='classification_notebooks\label_encoder_gender.pkl',mode='rb') as file:
+with open(file='label_encoder_gender.pkl',mode='rb') as file:
     label_encoder_obj=pickle.load(file=file)
 
-with open(file='classification_notebooks\onehot_encoder_geo.pkl',mode='rb') as file:
+with open(file='onehot_encoder_geo.pkl',mode='rb') as file:
     onehot_encoder_obj=pickle.load(file=file)   
 
-with open(file='classification_notebooks\scaler.pkl',mode='rb') as file:
+with open(file='scaler.pkl',mode='rb') as file:
     scaler_obj=pickle.load(file=file)     
 
 st.title('Customer Churn Prediction')    
